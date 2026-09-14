@@ -7,6 +7,7 @@ using namespace std;
 class Solution {
 public:
     vector<double> calcEquation(vector<vector<string>>& equations, vector<double>& values, vector<vector<string>>& queries) {
+        //题目没有实现逻辑闭环，测试用例没有如下情况：有两条不同的路径实现两个不同的答案，这时应该返回-1.
         unordered_map<string,unordered_map<string,double>> map;
         int n=equations.size();
         for(int i=0;i<n;i++){
